@@ -1,0 +1,32 @@
+Clase#2
+
+django=aplicaciones weg
+Anaconda=Analitics
+SQL Avchemy
+
+Float cientifica: -1.7e-6 = x10 a la -6
+
+Bool True False
+
+str 	"One\nTwo"   		\n escaped new line
+	'I\'m' 			\' escaped '
+
+multiline string """X\ty\tZ
+		 1\t292t3"""   \t=escaped tab
+
+bytes b"toto\xfe\775"
+	hexadecimal=	\xfe
+	octal=		\775 
+
+
+Inmutables
+variable 'Hola' tratar de cambiar la o por otra cosa
+
+
+---> Se puede abrir en modo consola, con solo ver en el tab
+
+Representación del 0
+
+a=0
+a=0.
+a=0.0
