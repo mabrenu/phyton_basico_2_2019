@@ -15,5 +15,9 @@ personas = [
 [201,110,187,175,156,165,156,135] # grupo 4
 ]
 
-b = [max(p) for p in personas]
-print('Máximos valores: ',b)
+grande=0
+for p in personas:
+	if max(p) > grande:
+		grande = max(p)
+		list = p
+print('Lista con el valor de mayor altura es: ',list)
