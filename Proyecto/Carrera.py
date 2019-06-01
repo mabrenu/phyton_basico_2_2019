@@ -1,4 +1,3 @@
-
 from Ciclos import ciclo
 
 class carrera(ciclo):
@@ -6,12 +5,5 @@ class carrera(ciclo):
     cciclo.inicializar_ciclo()
     cciclo.iniciar_ciclo()
     cciclo.imprimir()
-    pass
-
-
-
-
-
-
-
-
+    cciclo.resultado_final()
+pass
