@@ -24,7 +24,8 @@ class vehiculo(dict):
         self.update()
 
     def posicion(self):
-        posiciones = sorted(self.items(), key=lambda kv: (-kv[1]['Avance'],kv[1]['Intento']))
+        #posiciones = sorted(self.items(), key=lambda kv: (kv[1]['Avance'],-kv[1]['Intento']), reverse=True)
+        posiciones = sorted(self.items(), key=lambda kv: (-kv[1]['Intento'],kv[1]['Avance']), reverse=True)
         for a in posiciones:
             self[a[0]]['Posicion'] = posiciones.index(a) + 1
         self.update()

@@ -29,7 +29,7 @@ class ciclo(vehiculo, dict):
         self.Numero_ciclo = +1
 
     def nuevo_ciclo(self, num_ciclo):
-        for item in auto:
+        for item in list_competidores:
             auto.rendimiento_avance(item)
             auto.intento_vehiculo(item)
             auto.posicion()
@@ -37,32 +37,24 @@ class ciclo(vehiculo, dict):
         self.update({num_ciclo:auto})
 
     def eliminar_competidores(self):
-
         for k in auto.keys():
-            print(auto[k]['Avance'])
             if auto[k]['Avance'] > 1000 and k in list_competidores:
-                print('pase por aqui')
-                list_competidores.pop(k)
-
+                list_competidores.remove(k)
 
     def iniciar_ciclo(self):
-        print(len(list_competidores))
+        print('imprimir ',len(list_competidores))
 
         while len(list_competidores) > 2:
             self.Numero_ciclo = len(self) + 1
+            print('******* INICIO CICLO', self.Numero_ciclo,'*******' )
             self.nuevo_ciclo(self.Numero_ciclo)
             self.eliminar_competidores()
 
-            print('******* INICIO CICLO', self.Numero_ciclo,'*******' )
+    def resultado_final(self):
+        resultado = list(self.items())
+        print('La carrera tuvo', self.Numero_ciclo,'ciclos. \n El resultado de la carrera es: ',resultado[-1])
 
     def imprimir(self):
-        print(self)
+        print('LISTA FINAL',self)
         #import pandas as pd
         #pd.DataFrame(self)
-
-
-
-
-
-
-
